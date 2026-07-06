@@ -1,22 +1,86 @@
-# CO2 Emissions Analysis
+# Chile: CO2 Emissions vs Economic Growth (1990-2014)
 
-Exploratory analysis of global CO2 emissions per capita using World Bank ESG data.
-
-## What I did
-- Cleaned and filtered World Bank ESG dataset (removed regional aggregates)
-- Identified top 15 CO2 emitters per capita (2014)
-- Analyzed Chile's emissions trend over time (1990-2014)
-
-## Key findings
-The data shows that per-capita CO2 emissions (year 2014) are highest in small, oil/gas-rich economies (Qatar, UAE, Kuwait, Bahrain, Brunei) rather than the largest overall emitters. This suggests population size and energy-export economies drive per-capita figures more than total industrial output. Countries like the US and Australia, despite large total emissions, rank lower on a per-person basis. This distinction matters for policy: aggregate emissions and per-capita emissions tell different stories about who bears responsibility for climate impact
-
-Chile context:
-
-Chile's CO2 emissions per capita rose between 1990 and 2014, with a marked increase in the early 2000s coinciding with economic growth. Compared to the top emitters in the dataset, Chile's per-capita footprint remains moderate, reflecting its smaller-scale energy-export profile relative to Gulf states.
-
-## Tools used
-Python, pandas, matplotlib, Google Colab
+Exploratory analysis of the relationship between Chile's CO2 emissions per 
+capita and economic growth, using World Bank data.
 
 ## Background
-This project bridges my ESG/sustainability reporting experience (CDP) with 
-hands-on data analysis skills.
+
+Built as a self-directed learning project bridging my ESG/sustainability 
+reporting background (CDP) with hands-on data analysis using pandas and 
+matplotlib in Google Colab.
+
+## Question
+
+Does Chile's CO2 growth track economic growth? And does it matter whether 
+"economic growth" means the *growth rate* or the *size* of the economy?
+
+## Data sources
+
+- **World Bank ESG Data** (Kaggle) — CO2 emissions and GDP growth rate by country/year
+- **World Bank GDP Data** (Kaggle) — GDP level (current US$) by country/year
+
+## Approach
+
+```python
+import pandas as pd
+
+esg = pd.read_csv("ESGData.csv")
+country_info = pd.read_csv("ESGCountry.csv")
+
+real_countries = country_info[country_info["Region"].notna()]["Country Code"]
+year_columns = [str(y) for y in range(1990, 2015)]
+
+co2 = esg[esg["Indicator Name"] == "CO2 emissions (metric tons per capita)"]
+co2_countries = co2[co2["Country Code"].isin(real_countries)]
+
+chile = co2[co2["Country Name"] == "Chile"]
+gdp_row = esg[(esg["Country Name"] == "Chile") &
+               (esg["Indicator Name"] == "GDP growth (annual %)")]
+```
+
+Both CO2 and GDP data were reshaped from wide format (years as columns) to 
+long format (years as rows) using `.melt()`, then merged on Country Name + Year 
+to compare them side by side.
+
+## Finding 1: CO2 vs GDP growth (annual %)
+
+**No clear relationship.** GDP growth fluctuates year to year, as growth rates 
+naturally do (recessions, rebounds), while CO2 emissions rose fairly steadily. 
+Comparing a level (emissions) against a rate of change (growth %) doesn't 
+reveal a meaningful pattern.
+
+![Chile CO2 vs GDP growth](chile_co2_vs_gdp.png)
+
+## Finding 2: CO2 vs GDP level (current US$)
+
+**Clear relationship.** Both metrics trend upward together across the full 
+period, including a shared dip around 2008-2009 that coincides with the 
+global financial crisis.
+
+![Chile CO2 vs GDP level](chile_co2_vs_gdp_level.png)
+
+## Conclusion
+
+Chile's CO2 emissions per capita track much more closely with the *size* of 
+its economy (GDP level) than with its year-to-year *growth rate*. This 
+suggests emissions are tied to the overall scale of economic activity rather 
+than short-term growth fluctuations — meaning decoupling emissions from 
+growth (a common climate policy goal) would likely require structural 
+changes to the energy/industrial base, not just short-term economic 
+management.
+
+This also reinforced a broader analytical lesson: the first comparison 
+(growth rate) looked uncorrelated, while the second (GDP level) revealed a 
+clear relationship hiding behind the same underlying question. Choosing the 
+right variable to compare matters as much as finding data that's technically 
+related.
+
+## Tools used
+
+Python, pandas, matplotlib, Google Colab
+
+## Files in this repo
+
+- `co2_gdp_analysis.ipynb` — full notebook with code and outputs
+- `chile_co2_vs_gdp.png` — CO2 vs GDP growth rate chart
+- `chile_co2_vs_gdp_level.png` — CO2 vs GDP level chart
