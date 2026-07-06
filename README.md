@@ -58,14 +58,15 @@ reveal a meaningful pattern.
 period, including a shared dip around 2008-2009 that coincides with the 
 global financial crisis.
 
-![Chile CO2 vs GDP level](chile_co2_vs_gdp_level.png)
+<img width="989" height="590" alt="image" src="https://github.com/user-attachments/assets/d579ca16-a5a4-4524-ba33-c28d47db0a36" />
+
 
 ## Conclusion
 
 Chile's CO2 emissions per capita track much more closely with the *size* of 
 its economy (GDP level) than with its year-to-year *growth rate*. This 
 suggests emissions are tied to the overall scale of economic activity rather 
-than short-term growth fluctuations — meaning decoupling emissions from 
+than short-term growth fluctuations, meaning decoupling emissions from 
 growth (a common climate policy goal) would likely require structural 
 changes to the energy/industrial base, not just short-term economic 
 management.
