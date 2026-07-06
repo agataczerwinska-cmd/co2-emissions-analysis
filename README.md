@@ -49,7 +49,8 @@ naturally do (recessions, rebounds), while CO2 emissions rose fairly steadily.
 Comparing a level (emissions) against a rate of change (growth %) doesn't 
 reveal a meaningful pattern.
 
-![Chile CO2 vs GDP growth](chile_co2_vs_gdp.png)
+<img width="2008" height="1086" alt="image" src="https://github.com/user-attachments/assets/59751623-3e29-45fe-8d45-16ab839cfa48" />
+
 
 ## Finding 2: CO2 vs GDP level (current US$)
 
