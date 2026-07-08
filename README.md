@@ -83,6 +83,6 @@ Python, pandas, matplotlib, Google Colab
 
 ## Files in this repo
 
-- `co2_gdp_analysis.ipynb` — full notebook with code and outputs
-- `chile_co2_vs_gdp.png` — CO2 vs GDP growth rate chart
-- `chile_co2_vs_gdp_level.png` — CO2 vs GDP level chart
+- `co2_gdp_analysis.ipynb` - full notebook with code and outputs
+- `chile_co2_vs_gdp.png` - CO2 vs GDP growth rate chart
+- `chile_co2_vs_gdp_level.png` - CO2 vs GDP level chart
