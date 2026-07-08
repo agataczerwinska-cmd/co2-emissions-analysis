@@ -1,6 +1,6 @@
 # Chile: CO2 Emissions (Production-based) vs Economic Growth (1990-2014)
 
-Exploratory analysis of the relationship between Chile's CO2 emissions per 
+Exploratory analysis of the relationship between Chile's CO2 emissions (Production-based) per 
 capita and economic growth, using World Bank data.
 
 ## Background
