@@ -1,4 +1,4 @@
-# Chile: CO2 Emissions vs Economic Growth (1990-2014)
+# Chile: CO2 Emissions (Production-based) vs Economic Growth (1990-2014)
 
 Exploratory analysis of the relationship between Chile's CO2 emissions per 
 capita and economic growth, using World Bank data.
@@ -76,6 +76,16 @@ This also reinforced a broader analytical lesson: the first comparison
 clear relationship hiding behind the same underlying question. Choosing the 
 right variable to compare matters as much as finding data that's technically 
 related.
+
+Methodology note: Production-based vs. Consumption-based emissions
+
+This analysis uses production-based (territorial) CO2 emissions, meaning emissions physically produced within Chile's borders. This is the standard measure used in most national inventories and by the World Bank.
+
+It's important to note this is not the same as Chile's carbon footprint. Production-based emissions don't account for trade. If a country exports resource-intensive goods (e.g., copper, in Chile's case), emissions from producing those goods count against Chile, even if the demand driving that production comes from consumers elsewhere.
+
+Consumption-based emissions would instead reallocate emissions to the country where goods are ultimately consumed, offering a different picture of responsibility.
+
+Limitation: This analysis does not adjust for trade, so conclusions about Chile's "environmental performance" relative to GDP should be read with that caveat. A natural extension of this project would be comparing production-based vs. consumption-based emissions to see how much of Chile's footprint is externally driven demand vs. domestic consumption.
 
 ## Tools used
 
