@@ -1,4 +1,3 @@
-**#Chile: CO2 Emissions vs. GDP (Production & Consumption-Based), 1990–2014**
 
 # Chile: CO2 Emissions vs. GDP (Production & Consumption-Based), 1990–2014
 
