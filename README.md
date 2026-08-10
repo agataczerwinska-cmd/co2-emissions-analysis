@@ -46,9 +46,10 @@ This analysis uses two different ways of measuring CO2 emissions. **Production-b
 
 Comparing the two: production and consumption-based emissions track closely from 1990 to 2007, with the gap oscillating within roughly ±0.15 tons per capita and no sustained direction. From 2008 onward, a persistent positive gap emerges. Chile consistently consumes more embedded carbon than it produces domestically, peaking around 2011-2012. Both metrics also dip sharply in 2008-2009, consistent with the financial crisis, with consumption-based emissions swinging more sharply than production (plausible, since consumption is more exposed to trade volume, which contracts faster than domestic production during a recession).
 
+Chile is a heavy exporter of upstream, energy-intensive commodities and an importer of finished manufactured goods. Those two flows roughly cancelled through the 1990s and early 2000s, which is why the lines sit on top of each other.
+
 <img width="900" alt="Production vs Consumption CO2" src="https://github.com/agataczerwinska-cmd/chile-co2-vs-gdp-1990-2014/blob/main/production_vs_consumption_co2.png?raw=true">
 
-Chile is a heavy exporter of upstream, energy-intensive commodities and an importer of finished manufactured goods. Those two flows roughly cancelled through the 1990s and early 2000s, which is why the lines sit on top of each other.
 
 ## Finding 2: CO2 vs GDP growth (annual %)
 
