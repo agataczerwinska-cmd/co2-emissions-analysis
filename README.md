@@ -16,7 +16,7 @@ World Bank GDP Data (Kaggle) — GDP level (current US$) by country/year
 Global Carbon Project, via Our World in Data — CO2 emissions (consumption-based) by country/year
 
 **Approach**
-'''import pandas as pd
+```import pandas as pd
 
 esg = pd.read_csv("ESGData.csv")
 country_info = pd.read_csv("ESGCountry.csv")
@@ -32,7 +32,7 @@ chile = co2[co2["Country Name"] == "Chile"]
 gdp_row = esg[(esg["Country Name"] == "Chile") &
                (esg["Indicator Name"] == "GDP growth (annual %)")]
 
-chile_consumption = consumption_df[consumption_df["entity"] == "Chile"]'''
+chile_consumption = consumption_df[consumption_df["entity"] == "Chile"]```
 
 CO2, GDP, and consumption-based emissions data were reshaped from wide format (years as columns) to long format (years as rows) using .melt(), then merged on Year to compare all three side by side.
 
