@@ -41,12 +41,14 @@ CO2, GDP, and consumption-based emissions data were reshaped from wide format (y
 No clear relationship. GDP growth fluctuates year to year, as growth rates naturally do (recessions, rebounds), while CO2 emissions rose fairly steadily. Comparing a level (emissions) against a rate of change (growth %) doesn't reveal a meaningful pattern. Confirmed statistically: r = -0.42 (weak, inverse).
 
 <img width="2008" height="1086" alt="image" src="https://github.com/user-attachments/assets/59751623-3e29-45fe-8d45-16ab839cfa48" />
-Finding 2: CO2 vs GDP level (current US$)
+
+**Finding 2: CO2 vs GDP level (current US$)**
 
 Clear relationship. Both metrics trend upward together across the full period, including a shared dip around 2008–2009 that coincides with the global financial crisis. Confirmed statistically: r = 0.85 (strong positive).
 
 <img width="989" height="590" alt="image" src="https://github.com/user-attachments/assets/d579ca16-a5a4-4524-ba33-c28d47db0a36" />
-Finding 3: Production-based vs. Consumption-based emissions
+
+**Finding 3: Production-based vs. Consumption-based emissions**
 
 This analysis originally used production-based (territorial) CO2 emissions — what Chile physically emits within its borders, the standard measure used in most national inventories. This doesn't account for trade: if Chile exports resource-intensive goods (e.g. copper), those production emissions count against Chile even when demand comes from consumers elsewhere.
 
