@@ -1,4 +1,3 @@
-
 # Chile: CO2 Emissions vs. GDP (Production & Consumption-Based), 1990–2014
 
 Exploratory analysis of the relationship between Chile's CO2 emissions per capita and economic growth, using World Bank data — extended to compare production-based and consumption-based emissions accounting.
