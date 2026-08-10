@@ -40,27 +40,25 @@ chile_consumption = consumption_df[consumption_df["entity"] == "Chile"]
 
 CO2, GDP, and consumption-based emissions data were reshaped from wide format (years as columns) to long format (years as rows) using `.melt()`, then merged on Year to compare all three side by side.
 
-## Finding 1: CO2 vs GDP growth (annual %)
+## Finding 1: Production-based vs. Consumption-based emissions
+
+This analysis uses two different ways of measuring CO2 emissions. **Production-based** (territorial) emissions count what Chile physically emits within its borders — the standard measure used in most national inventories. This doesn't account for trade: if Chile exports resource-intensive goods (e.g. copper), those production emissions count against Chile even when demand comes from consumers elsewhere. **Consumption-based** emissions instead reallocate emissions to the country where goods are ultimately consumed — a different picture of environmental responsibility, sourced here from the Global Carbon Project.
+
+Comparing the two: production and consumption-based emissions track closely from 1990–2007, with the gap oscillating within roughly ±0.15 tons per capita and no sustained direction. From 2008 onward, a persistent positive gap emerges — Chile consistently consumes more embedded carbon than it produces domestically, peaking around 2011–2012. Both metrics also dip sharply in 2008–2009, consistent with the financial crisis, with consumption-based emissions swinging more sharply than production — plausible, since consumption is more exposed to trade volume, which contracts faster than domestic production during a recession.
+
+<img width="900" alt="Production vs Consumption CO2" src="https://github.com/agataczerwinska-cmd/chile-co2-vs-gdp-1990-2014/blob/main/production_vs_consumption_co2.png?raw=true">
+
+## Finding 2: CO2 vs GDP growth (annual %)
 
 No clear relationship. GDP growth fluctuates year to year, as growth rates naturally do (recessions, rebounds), while CO2 emissions rose fairly steadily. Comparing a level (emissions) against a rate of change (growth %) doesn't reveal a meaningful pattern. Confirmed statistically: **r = -0.42** (weak, inverse).
 
 <img width="900" alt="CO2 vs GDP growth" src="https://github.com/agataczerwinska-cmd/chile-co2-vs-gdp-1990-2014/blob/main/co2_vs_gdp_growth.png?raw=true">
 
-## Finding 2: CO2 vs GDP level (current US$)
+## Finding 3: CO2 vs GDP level (current US$)
 
 Clear relationship. Both metrics trend upward together across the full period, including a shared dip around 2008–2009 that coincides with the global financial crisis. Confirmed statistically: **r = 0.85** (strong positive).
 
 <img width="900" alt="CO2 vs GDP size" src="https://github.com/agataczerwinska-cmd/chile-co2-vs-gdp-1990-2014/blob/main/co2_vs_gdp_size.png?raw=true">
-
-## Finding 3: Production-based vs. Consumption-based emissions
-
-This analysis originally used **production-based** (territorial) CO2 emissions — what Chile physically emits within its borders, the standard measure used in most national inventories. This doesn't account for trade: if Chile exports resource-intensive goods (e.g. copper), those production emissions count against Chile even when demand comes from consumers elsewhere.
-
-**Consumption-based** emissions reallocate emissions to the country where goods are ultimately consumed — a different picture of environmental responsibility, sourced here from the Global Carbon Project.
-
-Comparing the two: production and consumption-based emissions track closely from 1990–2007, with the gap oscillating within roughly ±0.15 tons per capita and no sustained direction. From 2008 onward, a persistent positive gap emerges — Chile consistently consumes more embedded carbon than it produces domestically, peaking around 2011–2012. Both metrics also dip sharply in 2008–2009, consistent with the financial crisis, with consumption-based emissions swinging more sharply than production — plausible, since consumption is more exposed to trade volume, which contracts faster than domestic production during a recession.
-
-<img width="900" alt="Production vs Consumption CO2" src="https://github.com/agataczerwinska-cmd/chile-co2-vs-gdp-1990-2014/blob/main/production_vs_consumption_co2.png?raw=true">
 
 ## Statistical validation
 
@@ -86,7 +84,7 @@ Python, pandas, matplotlib, Google Colab
 
 - `Chile_analysis_co2_gdp.ipynb` — full notebook with code and outputs
 - `ESGData.csv`, `ESGCountry.csv`, `GDP by Country.csv`, `co2_clean.csv` — source data files
+- `production_vs_consumption_co2.png` — production vs. consumption-based CO2 chart
 - `co2_vs_gdp_growth.png` — CO2 vs GDP growth rate chart
 - `co2_vs_gdp_size.png` — CO2 vs GDP level chart
-- `production_vs_consumption_co2.png` — production vs. consumption-based CO2 chart
 - `co2_vs_gdp_scatter.png` — correlation scatter plots (GDP size vs. growth rate)
