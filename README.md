@@ -48,6 +48,8 @@ Comparing the two: production and consumption-based emissions track closely from
 
 <img width="900" alt="Production vs Consumption CO2" src="https://github.com/agataczerwinska-cmd/chile-co2-vs-gdp-1990-2014/blob/main/production_vs_consumption_co2.png?raw=true">
 
+Chile is a heavy exporter of upstream, energy-intensive commodities and an importer of finished manufactured goods. Those two flows roughly cancelled through the 1990s and early 2000s, which is why the lines sit on top of each other.
+
 ## Finding 2: CO2 vs GDP growth (annual %)
 
 No clear relationship. GDP growth fluctuates year to year, as growth rates naturally do (recessions, rebounds), while CO2 emissions rose fairly steadily. Comparing a level (emissions) against a rate of change (growth %) doesn't reveal a meaningful pattern. Confirmed statistically: **r = -0.42** (weak, inverse).
