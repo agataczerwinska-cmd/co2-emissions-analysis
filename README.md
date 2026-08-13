@@ -86,7 +86,7 @@ Python, pandas, matplotlib, Google Colab
 ## Files in this repo
 
 - `Chile_analysis_co2_gdp.ipynb`: full notebook with code and outputs
-- `ESGData.csv`, `ESGCountry.csv`, `GDP by Country.csv`, `co2_clean.csv`: source data files
+- `ESGCountry.csv`, `GDP by Country.csv`, `co2_clean.csv`: source data files
 - `production_vs_consumption_co2.png`: production vs. consumption-based CO2 chart
 - `co2_vs_gdp_growth.png`: CO2 vs GDP growth rate chart
 - `co2_vs_gdp_size.png`: CO2 vs GDP level chart
